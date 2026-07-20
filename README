@@ -1,1 +1,40 @@
-Edit later
+# HCJC2
+
+HCJC2 is the greenfield successor to JCStream, the public Hamilton County, Ohio Justice Center custody-data mirror.
+
+This repository starts with governance, architecture, data contracts, privacy rules, quality gates, and migration criteria before application code.
+
+## Project status
+
+- Phase: foundation and V1 audit
+- Production system: `AICincy/HCJC`
+- V2 target: this repository
+- Hosting target: Netlify, subject to final architecture validation
+- Change policy for V1: emergency fixes only
+- Migration policy: preserve verified behavior, redesign brittle implementation
+
+## Governing principles
+
+1. Reuse verified domain knowledge, not legacy structure.
+2. Keep public, private, generated, and evidentiary data boundaries explicit.
+3. Make all critical state transitions observable and testable.
+4. Separate pure domain logic from network, filesystem, deployment, and alerting side effects.
+5. Preserve last-known-good public data when an upstream source fails.
+6. Treat accessibility, privacy, legal copy, and provenance as release gates.
+7. Keep deployment deterministic and repository-owned.
+8. Do not publish identity correlations between custody records and unrelated geographic data.
+
+## Documentation
+
+- [Project charter](docs/PROJECT-CHARTER.md)
+- [Architecture principles](docs/ARCHITECTURE-PRINCIPLES.md)
+- [V1 disposition policy](docs/V1-DISPOSITION.md)
+- [Privacy and data invariants](docs/PRIVACY-INVARIANTS.md)
+- [Quality gates](docs/QUALITY-GATES.md)
+- [Test strategy](docs/TEST-STRATEGY.md)
+- [Migration acceptance criteria](docs/MIGRATION-ACCEPTANCE.md)
+- [Netlify decision record](docs/decisions/ADR-001-NETLIFY.md)
+
+## Current boundary
+
+No application, scraper, feed adapter, frontend, deployment workflow, or runtime infrastructure should be added until the V1 audit converts legacy behavior into explicit contracts and the architecture record is accepted.
