@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://data.aretheyinjail.com/schemas/common/1.0.0",
+  "title": "HCJC2 Common Definitions",
+  "$defs": {
+    "utcInstant": {"type": "string", "format": "date-time", "pattern": "Z$"},
+    "sourceRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["namespace", "value"],
+      "properties": {
+        "namespace": {"type": "string", "minLength": 1},
+        "value": {"type": "string", "minLength": 1}
+      }
+    },
+    "temporalValue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_text", "precision"],
+      "properties": {
+        "value": {"type": ["string", "null"]},
+        "source_text": {"type": ["string", "null"]},
+        "precision": {"enum": ["instant", "minute", "date", "month", "unknown"]},
+        "timezone": {"type": ["string", "null"]},
+        "unknown_reason": {"type": ["string", "null"]}
+      }
+    },
+    "sourceStatus": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "last_success_at", "completeness"],
+      "properties": {
+        "state": {"enum": ["current", "delayed_upstream", "source_paused", "source_frozen", "cached_after_fetch_failure", "conditional_empty", "derived", "retired"]},
+        "source_observed_at": {"type": ["string", "null"], "format": "date-time"},
+        "last_success_at": {"type": "string", "format": "date-time"},
+        "expected_refresh_seconds": {"type": ["integer", "null"], "minimum": 1},
+        "freshness_seconds": {"type": ["integer", "null"], "minimum": 0},
+        "completeness": {"enum": ["complete", "partial", "truncated", "unknown", "not_applicable"]},
+        "reason": {"type": ["string", "null"]}
+      }
+    },
+    "resultWindow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["returned_count", "truncated"],
+      "properties": {
+        "query_start": {"type": ["string", "null"]},
+        "query_end": {"type": ["string", "null"]},
+        "order": {"type": ["string", "null"]},
+        "limit": {"type": ["integer", "null"], "minimum": 1},
+        "returned_count": {"type": "integer", "minimum": 0},
+        "candidate_count": {"type": ["integer", "null"], "minimum": 0},
+        "truncated": {"type": "boolean"}
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_system", "acquired_at", "transformer"],
+      "properties": {
+        "source_system": {"type": "string", "minLength": 1},
+        "source_dataset_id": {"type": ["string", "null"]},
+        "source_url": {"type": ["string", "null"], "format": "uri"},
+        "acquired_at": {"type": "string", "format": "date-time"},
+        "transformer": {"type": "string", "minLength": 1},
+        "ruleset_versions": {"type": "object", "additionalProperties": {"type": "string"}}
+      }
+    }
+  }
+}

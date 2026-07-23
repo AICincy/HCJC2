@@ -1,0 +1,41 @@
+{
+  "schema_id": "hcjc2.run-manifest",
+  "schema_version": "1.0.0",
+  "run_id": "20260720T190000Z-0123456789ab",
+  "trigger": {
+    "type": "schedule",
+    "actor": "github-actions",
+    "requested_at": "2026-07-20T19:00:00Z"
+  },
+  "source": {
+    "repository": "AICincy/HCJC2",
+    "commit": "0123456789abcdef",
+    "configuration_sha256": ""
+  },
+  "prior_canonical": {
+    "roster_version": "",
+    "data_manifest_sha256": ""
+  },
+  "stages": [
+    {
+      "name": "preflight",
+      "status": "passed",
+      "started_utc": "",
+      "completed_utc": "",
+      "details": {}
+    }
+  ],
+  "sources": {},
+  "validations": [],
+  "artifacts": [],
+  "publication": {
+    "decision": "hold",
+    "reason_codes": [],
+    "canonical_before": "",
+    "canonical_after": ""
+  },
+  "application_deploy": null,
+  "rollback": null,
+  "alerts": [],
+  "completed_utc": ""
+}

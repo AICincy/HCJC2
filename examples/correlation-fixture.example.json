@@ -1,0 +1,23 @@
+{
+  "fixture_version": "1.0.0",
+  "fixture_id": "fx_example",
+  "relationship_type": "booking_to_dispatch",
+  "partition": "development",
+  "subjects": [
+    {"dataset_id": "hcso_current", "record_id": "booking_example"},
+    {"dataset_id": "cincinnati_cfs", "record_id": "dispatch_example"}
+  ],
+  "taxonomy_version": "offense-taxonomy-1.0.0",
+  "label": {
+    "value": "possible_link",
+    "authority_level": "C",
+    "rationale_codes": ["TIME_COMPATIBLE", "CONCEPT_COMPATIBLE", "NO_SHARED_IDENTIFIER"],
+    "evidence_refs": ["obs_booking", "obs_dispatch"],
+    "adjudication_status": "agreed"
+  },
+  "conditions": ["DATE_ONLY_BOOKING", "MULTIPLE_COMPETING_EVENTS"],
+  "privacy": {
+    "contains_real_personal_data": false,
+    "handling_class": "synthetic"
+  }
+}
