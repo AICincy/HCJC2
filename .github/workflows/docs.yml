@@ -11,13 +11,58 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+
+cd "$HOME/Downloads/hcjc-docs-publish/HCJC2"
+
+cat > .github/workflows/docs.yml <<'YAML'
+name: documentation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out HCJC2
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
-          python-version: '3.13'
+          path: HCJC2
+
+      - name: Check out HCJC V1 reference
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: AICincy/HCJC
+          ref: docs/v1-controlled-reference
+          path: HCJC
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: "3.13"
           cache: pip
-      - run: python -m pip install -e '.[dev]'
-      - run: ruff check tools tests
-      - run: python -m pytest tests/docsctl -v
-      - run: python -m tools.docsctl check --repo-root . --repository AICincy/HCJC2
+          cache-dependency-path: HCJC2/pyproject.toml
+
+      - name: Install documentation tooling
+        working-directory: HCJC2
+        run: python -m pip install -e '.[dev]'
+
+      - name: Lint
+        working-directory: HCJC2
+        run: ruff check tools tests
+
+      - name: Test
+        working-directory: HCJC2
+        run: python -m pytest tests/docsctl -q
+
+      - name: Validate documentation
+        working-directory: HCJC2
+        run: python -m tools.docsctl check --repo-root . --repository AICincy/HCJC2
