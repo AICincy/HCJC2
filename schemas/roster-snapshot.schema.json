@@ -1,0 +1,312 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://data.aretheyinjail.com/schemas/roster-snapshot/1.0.0",
+  "title": "HCJC2 Active Roster Snapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_uri",
+    "schema_version",
+    "dataset_id",
+    "release_id",
+    "generated_at",
+    "source_status",
+    "provenance",
+    "record_count",
+    "episodes"
+  ],
+  "properties": {
+    "schema_uri": {
+      "const": "https://data.aretheyinjail.com/schemas/roster-snapshot/1.0.0"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "dataset_id": {
+      "const": "hcjc2.active_roster"
+    },
+    "release_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_at": {
+      "$ref": "https://data.aretheyinjail.com/schemas/common/1.0.0#/$defs/utcInstant"
+    },
+    "source_status": {
+      "$ref": "https://data.aretheyinjail.com/schemas/common/1.0.0#/$defs/sourceStatus"
+    },
+    "provenance": {
+      "$ref": "https://data.aretheyinjail.com/schemas/common/1.0.0#/$defs/provenance"
+    },
+    "record_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "episodes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/episode"
+      }
+    }
+  },
+  "$defs": {
+    "episode": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "custody_episode_id",
+        "subject_ref",
+        "episode_id_derivation",
+        "source_observation",
+        "observation",
+        "charges",
+        "photo"
+      ],
+      "properties": {
+        "custody_episode_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subject_ref": {
+          "$ref": "https://data.aretheyinjail.com/schemas/common/1.0.0#/$defs/sourceRef"
+        },
+        "source_booking_number": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "episode_id_derivation": {
+          "enum": [
+            "official_booking_number",
+            "fallback_observation_key"
+          ]
+        },
+        "source_observation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name",
+            "date_of_birth",
+            "sex",
+            "race",
+            "booking_date",
+            "projected_release_date",
+            "holder_status"
+          ],
+          "properties": {
+            "name": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "last",
+                "first",
+                "middle",
+                "display"
+              ],
+              "properties": {
+                "last": {
+                  "type": "string"
+                },
+                "first": {
+                  "type": "string"
+                },
+                "middle": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "display": {
+                  "type": "string"
+                }
+              }
+            },
+            "date_of_birth": {
+              "$ref": "https://data.aretheyinjail.com/schemas/common/1.0.0#/$defs/temporalValue"
+            },
+            "sex": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "race": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "booking_date": {
+              "$ref": "https://data.aretheyinjail.com/schemas/common/1.0.0#/$defs/temporalValue"
+            },
+            "projected_release_date": {
+              "$ref": "https://data.aretheyinjail.com/schemas/common/1.0.0#/$defs/temporalValue"
+            },
+            "holder_status": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "observation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "first_seen_at",
+            "last_seen_at"
+          ],
+          "properties": {
+            "first_seen_at": {
+              "$ref": "https://data.aretheyinjail.com/schemas/common/1.0.0#/$defs/utcInstant"
+            },
+            "last_seen_at": {
+              "$ref": "https://data.aretheyinjail.com/schemas/common/1.0.0#/$defs/utcInstant"
+            }
+          }
+        },
+        "charges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/charge"
+          }
+        },
+        "photo": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "available",
+                "not_published",
+                "not_available",
+                "pending_removal"
+              ]
+            },
+            "object_ref": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "sha256": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          }
+        }
+      }
+    },
+    "charge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "charge_record_id",
+        "source_code",
+        "source_description",
+        "case_refs",
+        "court_date",
+        "bond",
+        "source_disposition"
+      ],
+      "properties": {
+        "charge_record_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "case_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "https://data.aretheyinjail.com/schemas/common/1.0.0#/$defs/sourceRef"
+          }
+        },
+        "court_date": {
+          "$ref": "https://data.aretheyinjail.com/schemas/common/1.0.0#/$defs/temporalValue"
+        },
+        "bond": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "source_text"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "reported",
+                "unknown",
+                "nonmonetary",
+                "percentage",
+                "conditional"
+              ]
+            },
+            "amount_minor": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "currency": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[A-Z]{3}$"
+            },
+            "source_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "bond_type_source_text": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "source_disposition": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "comments": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "offense_assessment_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

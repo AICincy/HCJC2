@@ -1,40 +1,30 @@
 # HCJC2
 
-HCJC2 is the greenfield successor to JCStream, the public Hamilton County, Ohio Justice Center custody-data mirror.
+HCJC2 is the greenfield successor to JCStream, the public Hamilton County, Ohio Justice Center custody-data system.
 
-This repository starts with governance, architecture, data contracts, privacy rules, quality gates, and migration criteria before application code.
+## Status
 
-## Project status
+- Phase: documentation architecture and contract migration
+- Production reference: `AICincy/HCJC`
+- V2 repository: `AICincy/HCJC2`
+- V1 change policy: emergency fixes only
 
-- Phase: foundation and V1 audit
-- Production system: `AICincy/HCJC`
-- V2 target: this repository
-- Hosting target: Netlify, subject to final architecture validation
-- Change policy for V1: emergency fixes only
-- Migration policy: preserve verified behavior, redesign brittle implementation
+## Documentation authority
 
-## Governing principles
+- [Master Specification](docs/MASTER-SPEC.md)
+- [Canonical Cross-Version Reference](docs/reference/HCJC-CANONICAL-REFERENCE.md)
+- [Reference Registry](docs/reference/REFERENCE-REGISTRY.md)
+- [Traceability Matrix](docs/reference/TRACEABILITY-MATRIX.md)
 
-1. Reuse verified domain knowledge, not legacy structure.
-2. Keep public, private, generated, and evidentiary data boundaries explicit.
-3. Make all critical state transitions observable and testable.
-4. Separate pure domain logic from network, filesystem, deployment, and alerting side effects.
-5. Preserve last-known-good public data when an upstream source fails.
-6. Treat accessibility, privacy, legal copy, and provenance as release gates.
-7. Keep deployment deterministic and repository-owned.
-8. Do not publish identity correlations between custody records and unrelated geographic data.
+## Controlled modules
 
-## Documentation
-
-- [Project charter](docs/PROJECT-CHARTER.md)
-- [Architecture principles](docs/ARCHITECTURE-PRINCIPLES.md)
-- [V1 disposition policy](docs/V1-DISPOSITION.md)
-- [Privacy and data invariants](docs/PRIVACY-INVARIANTS.md)
-- [Quality gates](docs/QUALITY-GATES.md)
-- [Test strategy](docs/TEST-STRATEGY.md)
-- [Migration acceptance criteria](docs/MIGRATION-ACCEPTANCE.md)
-- [Netlify decision record](docs/decisions/ADR-001-NETLIFY.md)
-
-## Current boundary
-
-No application, scraper, feed adapter, frontend, deployment workflow, or runtime infrastructure should be added until the V1 audit converts legacy behavior into explicit contracts and the architecture record is accepted.
+1. [System Architecture](docs/architecture/SYSTEM-ARCHITECTURE.md)
+2. [Data and Schemas](docs/data/DATA-AND-SCHEMAS.md)
+3. [Acquisition and Publication](docs/pipeline/ACQUISITION-AND-PUBLICATION.md)
+4. [Correlations](docs/correlations/CORRELATIONS.md)
+5. [Offense Taxonomy](docs/taxonomy/OFFENSE-TAXONOMY.md)
+6. [Product and UI/UX](docs/product/PRODUCT-AND-UI-UX.md)
+7. [Privacy and Legal](docs/governance/PRIVACY-AND-LEGAL.md)
+8. [Operations and Security](docs/operations/OPERATIONS-AND-SECURITY.md)
+9. [Testing and Quality](docs/quality/TESTING-AND-QUALITY.md)
+10. [Migration and Traceability](docs/migration/MIGRATION-AND-TRACEABILITY.md)

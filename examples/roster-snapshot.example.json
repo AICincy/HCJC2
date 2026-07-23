@@ -1,0 +1,57 @@
+{
+  "schema_uri": "https://data.aretheyinjail.com/schemas/roster-snapshot/1.0.0",
+  "schema_version": "1.0.0",
+  "dataset_id": "hcjc2.active_roster",
+  "release_id": "rel_20260720T183422Z_example",
+  "generated_at": "2026-07-20T18:34:22Z",
+  "source_status": {
+    "state": "current",
+    "source_observed_at": "2026-07-20T18:31:00Z",
+    "last_success_at": "2026-07-20T18:34:22Z",
+    "expected_refresh_seconds": 2700,
+    "freshness_seconds": 202,
+    "completeness": "complete",
+    "reason": null
+  },
+  "provenance": {
+    "source_system": "Hamilton County Sheriff public inmate roster",
+    "source_dataset_id": null,
+    "source_url": "https://www.hcso.org/justice-center-services/inmate-search/",
+    "acquired_at": "2026-07-20T18:34:22Z",
+    "transformer": "hcjc2-roster-normalizer/0.1.0",
+    "ruleset_versions": {"offense_taxonomy": "1.0.0"}
+  },
+  "record_count": 1,
+  "episodes": [
+    {
+      "custody_episode_id": "cust_hcso_1234567_B000001",
+      "subject_ref": {"namespace": "hcso.inmate_number", "value": "1234567"},
+      "source_booking_number": "B000001",
+      "episode_id_derivation": "official_booking_number",
+      "source_observation": {
+        "name": {"last": "EXAMPLE", "first": "PERSON", "middle": null, "display": "EXAMPLE PERSON"},
+        "date_of_birth": {"value": "1990-01-01", "source_text": "1/1/90", "precision": "date", "timezone": null, "unknown_reason": null},
+        "sex": "U",
+        "race": "U",
+        "booking_date": {"value": "2026-07-20", "source_text": "7/20/26", "precision": "date", "timezone": "America/New_York", "unknown_reason": null},
+        "projected_release_date": {"value": null, "source_text": "N/A", "precision": "unknown", "timezone": null, "unknown_reason": "source_reported_unknown"},
+        "holder_status": null
+      },
+      "observation": {"first_seen_at": "2026-07-20T18:34:22Z", "last_seen_at": "2026-07-20T18:34:22Z"},
+      "charges": [
+        {
+          "charge_record_id": "chg_example_1",
+          "source_code": "0000.00",
+          "source_description": "SYNTHETIC EXAMPLE ONLY",
+          "case_refs": [],
+          "court_date": {"value": null, "source_text": "", "precision": "unknown", "timezone": null, "unknown_reason": "not_reported"},
+          "bond": {"status": "unknown", "amount_minor": null, "currency": null, "source_text": "", "bond_type_source_text": ""},
+          "source_disposition": null,
+          "comments": null,
+          "offense_assessment_id": null
+        }
+      ],
+      "photo": {"status": "not_available", "object_ref": null, "sha256": null}
+    }
+  ]
+}

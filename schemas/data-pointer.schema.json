@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://data.aretheyinjail.com/schemas/data-pointer.schema.json",
+  "title": "HCJC2 Current Data Pointer",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "release_id",
+    "manifest_sha256",
+    "promoted_at",
+    "publisher_run_id",
+    "previous_release_id"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "release_id": {
+      "type": "string",
+      "pattern": "^[0-9]{8}T[0-9]{6}Z-[a-f0-9]{8,64}$"
+    },
+    "manifest_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "promoted_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "publisher_run_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "previous_release_id": {
+      "type": ["string", "null"],
+      "pattern": "^[0-9]{8}T[0-9]{6}Z-[a-f0-9]{8,64}$"
+    }
+  }
+}

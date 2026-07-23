@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://data.aretheyinjail.com/schemas/release-manifest.schema.json",
+  "title": "HCJC2 Release Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "release_id",
+    "generated_at",
+    "source_status",
+    "artifacts"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "release_id": {
+      "type": "string",
+      "pattern": "^[0-9]{8}T[0-9]{6}Z-[a-f0-9]{8,64}$"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source_status": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "enum": [
+          "current",
+          "delayed_upstream",
+          "source_paused",
+          "source_frozen",
+          "cached_after_fetch_failure",
+          "conditional_empty",
+          "derived"
+        ]
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "logical_path",
+          "object_key",
+          "sha256",
+          "bytes",
+          "content_type",
+          "classification"
+        ],
+        "properties": {
+          "logical_path": {
+            "type": "string",
+            "pattern": "^/v1/"
+          },
+          "object_key": {
+            "type": "string",
+            "pattern": "^releases/"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "content_type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "classification": {
+            "type": "string",
+            "enum": [
+              "public_current_personal",
+              "public_current_nonpersonal",
+              "public_aggregate"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema_uri": "https://data.aretheyinjail.com/schemas/search-index/1.0.0",
+  "schema_version": "1.0.0",
+  "dataset_id": "hcjc2.search.active_roster",
+  "release_id": "rel_20260720T183422Z_example",
+  "generated_at": "2026-07-20T18:34:22Z",
+  "record_count": 1,
+  "records": [
+    {
+      "custody_episode_id": "cust_hcso_1234567_B000001",
+      "display_name": "EXAMPLE PERSON",
+      "booking_date": "2026-07-20",
+      "primary_offense_label": null,
+      "primary_offense_tier": null,
+      "offense_assessment_id": null,
+      "photo_available": false
+    }
+  ]
+}

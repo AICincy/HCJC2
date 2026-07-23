@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://data.aretheyinjail.com/schemas/activity-events/1.0.0",
+  "title": "HCJC2 Activity Events",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_uri",
+    "schema_version",
+    "dataset_id",
+    "release_id",
+    "generated_at",
+    "source_status",
+    "provenance",
+    "record_count",
+    "events"
+  ],
+  "properties": {
+    "schema_uri": {
+      "const": "https://data.aretheyinjail.com/schemas/activity-events/1.0.0"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "dataset_id": {
+      "enum": [
+        "hcjc2.activity.identified",
+        "hcjc2.activity.anonymized"
+      ]
+    },
+    "release_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_at": {
+      "$ref": "https://data.aretheyinjail.com/schemas/common/1.0.0#/$defs/utcInstant"
+    },
+    "source_status": {
+      "$ref": "https://data.aretheyinjail.com/schemas/common/1.0.0#/$defs/sourceStatus"
+    },
+    "provenance": {
+      "$ref": "https://data.aretheyinjail.com/schemas/common/1.0.0#/$defs/provenance"
+    },
+    "record_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "event_id",
+          "event_type",
+          "occurred_at",
+          "retention_class",
+          "summary"
+        ],
+        "properties": {
+          "event_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "event_type": {
+            "enum": [
+              "custody.booked",
+              "custody.released",
+              "custody.updated",
+              "source.degraded",
+              "source.recovered",
+              "correlation.published",
+              "correlation.withdrawn",
+              "record.corrected"
+            ]
+          },
+          "occurred_at": {
+            "$ref": "https://data.aretheyinjail.com/schemas/common/1.0.0#/$defs/temporalValue"
+          },
+          "retention_class": {
+            "enum": [
+              "identified_short_term",
+              "anonymized_long_term",
+              "aggregate_permanent",
+              "operational"
+            ]
+          },
+          "custody_episode_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "subject_display_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "summary": {
+            "type": "string"
+          },
+          "offense_assessment_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

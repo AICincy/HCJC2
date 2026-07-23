@@ -1,0 +1,37 @@
+{
+  "schema_uri": "https://data.aretheyinjail.com/schemas/activity-events/1.0.0",
+  "schema_version": "1.0.0",
+  "dataset_id": "hcjc2.activity.identified",
+  "release_id": "rel_20260720T183422Z_example",
+  "generated_at": "2026-07-20T18:34:22Z",
+  "source_status": {
+    "state": "derived",
+    "source_observed_at": "2026-07-20T18:31:00Z",
+    "last_success_at": "2026-07-20T18:34:22Z",
+    "expected_refresh_seconds": 2700,
+    "freshness_seconds": 202,
+    "completeness": "complete",
+    "reason": null
+  },
+  "provenance": {
+    "source_system": "HCJC2 roster differ",
+    "source_dataset_id": "hcjc2.active_roster",
+    "source_url": null,
+    "acquired_at": "2026-07-20T18:34:22Z",
+    "transformer": "hcjc2-activity/0.1.0",
+    "ruleset_versions": {}
+  },
+  "record_count": 1,
+  "events": [
+    {
+      "event_id": "evt_example_booking",
+      "event_type": "custody.booked",
+      "occurred_at": {"value": "2026-07-20", "source_text": "7/20/26", "precision": "date", "timezone": "America/New_York", "unknown_reason": null},
+      "retention_class": "identified_short_term",
+      "custody_episode_id": "cust_hcso_1234567_B000001",
+      "subject_display_name": "EXAMPLE PERSON",
+      "summary": "Synthetic booking example",
+      "offense_assessment_id": null
+    }
+  ]
+}

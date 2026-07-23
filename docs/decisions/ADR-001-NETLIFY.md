@@ -1,7 +1,26 @@
-# ADR-001: Netlify as the V2 Hosting Target
+---
+title: Netlify Application Hosting
+reference_namespace: D
+status: deprecated
+authority: architecture-decision
+owner_repository: AICincy/HCJC2
+document_family: decisions
+effective_date: 2026-07-23
+canonical_reference:
+  version: 1.0.0
+  tag: reference-v1.0.0
+supersedes: []
+superseded_by: null
+relationships: []
+---
 
-- Status: Provisional
+> **Authority:** Architecture decision governing the subject stated below.
+
+# D-1 Netlify Application Hosting
+
+- Status: Superseded in part by ADR-004 and ADR-005
 - Date: 2026-07-20
+- Superseded: 2026-07-21
 
 ## Context
 
@@ -9,7 +28,7 @@ V1 publishes a static site through GitHub Pages after GitHub Actions acquires da
 
 ## Decision
 
-Netlify must be evaluated and included in HCJC2 documentation. The provisional target is:
+This initial decision required a complete Netlify evaluation. ADR-004 accepted Netlify for the application plane and separated frequent data publication. ADR-005 accepted a private R2 origin with a Worker gateway for the data plane. The original provisional target was:
 
 - GitHub Actions controls acquisition, validation, transformation, and authoritative static build.
 - Netlify hosts immutable static artifacts.

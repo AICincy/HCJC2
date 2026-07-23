@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "assessment_id": "charge_assess_example",
+  "observation_id": "obs_example",
+  "taxonomy_version": "offense-taxonomy-1.0.0",
+  "authority_candidates": [
+    {
+      "authority_id": "orc-2913.02",
+      "status": "supported",
+      "evidence": ["validated identifier"]
+    }
+  ],
+  "selected_authority_id": "orc-2913.02",
+  "classification": {
+    "class": "unknown",
+    "degree": null,
+    "rule_id": null,
+    "reason": "value and other required statutory facts unavailable"
+  },
+  "concepts": [
+    {"concept_id": "property.theft", "strength": "strong"}
+  ],
+  "evidence": {
+    "supporting": ["source description: THEFT"],
+    "conflicting": ["Common Pleas venue suggests felony handling"],
+    "missing": ["property value", "victim classification", "prior theft history"],
+    "disqualifying": []
+  },
+  "review_status": "needs_authority_review"
+}

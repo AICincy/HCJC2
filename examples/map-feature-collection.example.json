@@ -1,0 +1,42 @@
+{
+  "type": "FeatureCollection",
+  "schema_uri": "https://data.aretheyinjail.com/schemas/map-feature-collection/1.0.0",
+  "schema_version": "1.0.0",
+  "dataset_id": "hcjc2.map.public_safety",
+  "release_id": "rel_20260720T183422Z_example",
+  "generated_at": "2026-07-20T18:34:22Z",
+  "source_status": {
+    "state": "derived",
+    "source_observed_at": "2026-07-20T18:00:00Z",
+    "last_success_at": "2026-07-20T18:34:22Z",
+    "expected_refresh_seconds": 3600,
+    "freshness_seconds": 2062,
+    "completeness": "truncated",
+    "reason": "public display cap"
+  },
+  "result_window": {
+    "query_start": "2026-06-20T00:00:00-04:00",
+    "query_end": "2026-07-20T18:00:00-04:00",
+    "order": "event_time descending",
+    "limit": 600,
+    "returned_count": 1,
+    "candidate_count": 700,
+    "truncated": true
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "map_example_1",
+      "geometry": {"type": "Point", "coordinates": [-84.512, 39.103]},
+      "properties": {
+        "event_type": "dispatch.call_for_service",
+        "source_ref": {"namespace": "cincinnati.cfs.event_number", "value": "SYNTHETIC-1"},
+        "event_time": {"value": "2026-07-20T17:00:00-04:00", "source_text": "2026-07-20 17:00", "precision": "minute", "timezone": "America/New_York", "unknown_reason": null},
+        "location_precision": "block",
+        "display_label": "Synthetic event",
+        "address_display": "100 BLOCK EXAMPLE ST",
+        "neighborhood": "Example"
+      }
+    }
+  ]
+}

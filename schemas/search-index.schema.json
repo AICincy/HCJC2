@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://data.aretheyinjail.com/schemas/search-index/1.0.0",
+  "title": "HCJC2 Search Index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_uri",
+    "schema_version",
+    "dataset_id",
+    "release_id",
+    "generated_at",
+    "record_count",
+    "records"
+  ],
+  "properties": {
+    "schema_uri": {
+      "const": "https://data.aretheyinjail.com/schemas/search-index/1.0.0"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "dataset_id": {
+      "const": "hcjc2.search.active_roster"
+    },
+    "release_id": {
+      "type": "string"
+    },
+    "generated_at": {
+      "$ref": "https://data.aretheyinjail.com/schemas/common/1.0.0#/$defs/utcInstant"
+    },
+    "record_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "custody_episode_id",
+          "display_name",
+          "booking_date",
+          "photo_available"
+        ],
+        "properties": {
+          "custody_episode_id": {
+            "type": "string"
+          },
+          "display_name": {
+            "type": "string"
+          },
+          "booking_date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "primary_offense_label": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "primary_offense_tier": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "offense_assessment_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "photo_available": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

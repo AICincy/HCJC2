@@ -1,0 +1,21 @@
+{
+  "schema_id": "hcjc2.public-artifact-manifest",
+  "schema_version": "1.0.0",
+  "version": "20260720T190000Z-0123456789ab",
+  "generated_utc": "2026-07-20T19:00:00Z",
+  "run_id": "20260720T190000Z-0123456789ab",
+  "artifacts": [
+    {
+      "path": "current.json",
+      "content_type": "application/json",
+      "schema": "hcjc2.current-roster@1.0.0",
+      "bytes": 0,
+      "sha256": "",
+      "cache_control": "public, max-age=60, must-revalidate",
+      "classification": "public-current",
+      "retention": "replace-on-approved-promotion"
+    }
+  ],
+  "previous_version": "",
+  "manifest_sha256": ""
+}

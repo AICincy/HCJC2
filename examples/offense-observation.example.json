@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "observation_id": "obs_example",
+  "source": {
+    "agency": "HCSO",
+    "dataset_id": "hcso_current",
+    "snapshot_sha256": "example",
+    "record_id": "example",
+    "retrieved_at": "2026-07-20T18:34:00Z"
+  },
+  "reported": {
+    "code_raw": "2913.02",
+    "description_raw": "THEFT",
+    "degree_raw": null,
+    "case_numbers": ["B 2600000"],
+    "court_raw": "COMMON PLEAS"
+  }
+}

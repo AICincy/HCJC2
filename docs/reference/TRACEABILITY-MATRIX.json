@@ -1,0 +1,442 @@
+[
+  {
+    "relationship": "implements",
+    "source": "V1-1",
+    "target": "A-3"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-4",
+    "target": "A-13"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-5",
+    "target": "A-21"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-7",
+    "target": "A-42"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-11",
+    "target": "A-4"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-11",
+    "target": "A-11"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-12",
+    "target": "A-5"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-12",
+    "target": "A-6"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-13",
+    "target": "A-8"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-13",
+    "target": "A-9"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-13",
+    "target": "A-10"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-16",
+    "target": "A-2"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-19",
+    "target": "A-18"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-24",
+    "target": "A-17"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-25",
+    "target": "A-1"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-32",
+    "target": "A-15"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-38",
+    "target": "A-16"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-40",
+    "target": "A-13"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-41",
+    "target": "A-26"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-42",
+    "target": "A-25"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-44",
+    "target": "A-27"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-45",
+    "target": "A-31"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-47",
+    "target": "A-30"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-51",
+    "target": "A-29"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-53",
+    "target": "A-34"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-54",
+    "target": "A-33"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-56",
+    "target": "A-35"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-58",
+    "target": "A-36"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-69",
+    "target": "A-41"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-74",
+    "target": "A-40"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-82",
+    "target": "A-21"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-88",
+    "target": "A-38"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-89",
+    "target": "A-37"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-98",
+    "target": "A-23"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-106",
+    "target": "A-24"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-107",
+    "target": "A-44"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-111",
+    "target": "A-45"
+  },
+  {
+    "relationship": "maps-to",
+    "source": "V1-116",
+    "target": "V2-121"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-118",
+    "target": "A-43"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-119",
+    "target": "A-46"
+  },
+  {
+    "relationship": "implements",
+    "source": "V1-120",
+    "target": "A-45"
+  },
+  {
+    "relationship": "refines",
+    "source": "V2-3",
+    "target": "A-42"
+  },
+  {
+    "relationship": "constrained-by",
+    "source": "V2-11",
+    "target": "D-6"
+  },
+  {
+    "relationship": "refines",
+    "source": "V2-11",
+    "target": "A-3"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-12",
+    "target": "A-17"
+  },
+  {
+    "relationship": "refines",
+    "source": "V2-13",
+    "target": "A-2"
+  },
+  {
+    "relationship": "refines",
+    "source": "V2-14",
+    "target": "A-7"
+  },
+  {
+    "relationship": "refines",
+    "source": "V2-18",
+    "target": "A-12"
+  },
+  {
+    "relationship": "refines",
+    "source": "V2-19",
+    "target": "A-19"
+  },
+  {
+    "relationship": "refines",
+    "source": "V2-19",
+    "target": "A-20"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-22",
+    "target": "A-22"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-24",
+    "target": "A-21"
+  },
+  {
+    "relationship": "constrained-by",
+    "source": "V2-25",
+    "target": "D-4"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-26",
+    "target": "A-2"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-29",
+    "target": "A-16"
+  },
+  {
+    "relationship": "constrained-by",
+    "source": "V2-30",
+    "target": "D-5"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-30",
+    "target": "A-14"
+  },
+  {
+    "relationship": "refines",
+    "source": "V2-34",
+    "target": "A-18"
+  },
+  {
+    "relationship": "constrained-by",
+    "source": "V2-39",
+    "target": "D-2"
+  },
+  {
+    "relationship": "refines",
+    "source": "V2-39",
+    "target": "A-25"
+  },
+  {
+    "relationship": "refines",
+    "source": "V2-41",
+    "target": "A-26"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-43",
+    "target": "A-27"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-44",
+    "target": "A-28"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-45",
+    "target": "A-29"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-46",
+    "target": "A-30"
+  },
+  {
+    "relationship": "refines",
+    "source": "V2-47",
+    "target": "A-31"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-49",
+    "target": "A-32"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-53",
+    "target": "A-39"
+  },
+  {
+    "relationship": "constrained-by",
+    "source": "V2-55",
+    "target": "D-3"
+  },
+  {
+    "relationship": "refines",
+    "source": "V2-55",
+    "target": "A-33"
+  },
+  {
+    "relationship": "refines",
+    "source": "V2-56",
+    "target": "A-34"
+  },
+  {
+    "relationship": "refines",
+    "source": "V2-57",
+    "target": "A-35"
+  },
+  {
+    "relationship": "refines",
+    "source": "V2-58",
+    "target": "A-36"
+  },
+  {
+    "relationship": "refines",
+    "source": "V2-73",
+    "target": "A-41"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-77",
+    "target": "A-40"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-78",
+    "target": "A-40"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-89",
+    "target": "A-37"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-90",
+    "target": "A-38"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-91",
+    "target": "A-39"
+  },
+  {
+    "relationship": "refines",
+    "source": "V2-102",
+    "target": "A-23"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-111",
+    "target": "A-44"
+  },
+  {
+    "relationship": "verifies",
+    "source": "V2-119",
+    "target": "A-16"
+  },
+  {
+    "relationship": "refines",
+    "source": "V2-121",
+    "target": "V1-116"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-124",
+    "target": "A-46"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-130",
+    "target": "A-42"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-132",
+    "target": "A-45"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-134",
+    "target": "A-43"
+  },
+  {
+    "relationship": "requires",
+    "source": "V2-135",
+    "target": "A-42"
+  }
+]
