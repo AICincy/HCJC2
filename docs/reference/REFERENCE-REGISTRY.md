@@ -312,3 +312,4 @@
 | D-4 | Separate Application and Data Publication | AICincy/HCJC2 | `docs/decisions/ADR-004-NETLIFY-AND-DATA-PUBLICATION.md#d-4-separate-application-and-data-publication` | approved | architecture-decision | 2026-07-23 | 1.0.0 |
 | D-5 | Private R2 Origin with Worker Gateway | AICincy/HCJC2 | `docs/decisions/ADR-005-R2-WORKER-DATA-PLANE.md#d-5-private-r2-origin-with-worker-gateway` | approved | architecture-decision | 2026-07-23 | 1.0.0 |
 | D-6 | Canonical Public Data Contracts | AICincy/HCJC2 | `docs/decisions/ADR-006-CANONICAL-DATA-CONTRACTS.md#d-6-canonical-public-data-contracts` | approved | architecture-decision | 2026-07-23 | 1.0.0 |
+| E-1 | Cross-Version Documentation Release Review | AICincy/HCJC2 | `docs/quality/RELEASE-EVIDENCE.md#e-1-cross-version-documentation-release-review` | approved | documentation-release-evidence | 2026-07-23 | 1.0.0 |

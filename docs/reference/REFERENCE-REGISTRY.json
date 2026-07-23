@@ -3386,5 +3386,16 @@
     "repository": "AICincy/HCJC2",
     "status": "approved",
     "title": "Canonical Public Data Contracts"
+  },
+  {
+    "anchor": "e-1-cross-version-documentation-release-review",
+    "authority": "documentation-release-evidence",
+    "canonical_version": "1.0.0",
+    "document": "docs/quality/RELEASE-EVIDENCE.md",
+    "effective_date": "2026-07-23",
+    "reference": "E-1",
+    "repository": "AICincy/HCJC2",
+    "status": "approved",
+    "title": "Cross-Version Documentation Release Review"
   }
 ]

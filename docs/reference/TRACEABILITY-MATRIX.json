@@ -438,5 +438,15 @@
     "relationship": "requires",
     "source": "V2-135",
     "target": "A-42"
+  },
+  {
+    "relationship": "produces-evidence-for",
+    "source": "E-1",
+    "target": "V1-120"
+  },
+  {
+    "relationship": "produces-evidence-for",
+    "source": "E-1",
+    "target": "V2-136"
   }
 ]

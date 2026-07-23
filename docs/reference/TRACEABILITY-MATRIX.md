@@ -92,3 +92,5 @@
 | V2-132 | requires | A-45 |
 | V2-134 | requires | A-43 |
 | V2-135 | requires | A-42 |
+| E-1 | produces-evidence-for | V1-120 |
+| E-1 | produces-evidence-for | V2-136 |

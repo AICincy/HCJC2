@@ -32,3 +32,4 @@ relationships: []
 | Approval | Repository owner with explicit V1 and V2 impact review |
 | Status | Approved |
 | Entries | A-1 through A-46 |
+| Release evidence | [E-1 Cross-Version Documentation Release Review](../quality/RELEASE-EVIDENCE.md#e-1-cross-version-documentation-release-review) |

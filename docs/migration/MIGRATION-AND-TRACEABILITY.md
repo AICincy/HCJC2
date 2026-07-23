@@ -113,3 +113,7 @@ Related controlled extensions and verification records are linked as they are ap
 ## Supporting material
 
 Supporting research, audits, and historical planning remain non-authoritative under `docs/supporting/`.
+
+## Release evidence
+
+The initial controlled release review is recorded in [E-1 Cross-Version Documentation Release Review](../quality/RELEASE-EVIDENCE.md#e-1-cross-version-documentation-release-review).
