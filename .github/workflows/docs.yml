@@ -13,25 +13,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
-cd "$HOME/Downloads/hcjc-docs-publish/HCJC2"
-
-cat > .github/workflows/docs.yml <<'YAML'
-name: documentation
-
-on:
-  push:
-    branches: [main]
-  pull_request:
-
-permissions:
-  contents: read
-
-jobs:
-  validate:
-    runs-on: ubuntu-latest
-
-    steps:
       - name: Check out HCJC2
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
