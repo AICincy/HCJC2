@@ -7,7 +7,6 @@ from typing import Literal, Sequence
 from tools.docsctl.links import validate_local_links
 from tools.docsctl.model import DocumentStatus, ParsedDocument
 
-
 Severity = Literal["warning", "error"]
 ALLOWED_RELATIONS = {
     "defines",

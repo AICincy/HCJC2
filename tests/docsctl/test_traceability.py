@@ -3,7 +3,6 @@ from pathlib import Path
 from tools.docsctl.parser import parse_document
 from tools.docsctl.traceability import build_traceability, render_traceability_markdown
 
-
 FIXTURE = Path(__file__).parent / "fixtures" / "valid-controlled.md"
 
 

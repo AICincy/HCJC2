@@ -10,7 +10,6 @@ from tools.docsctl.snapshot import SnapshotMetadata, render_v1_snapshot
 from tools.docsctl.traceability import build_traceability, render_traceability_json, render_traceability_markdown
 from tools.docsctl.validate import discover_controlled_documents, validate_documents
 
-
 COMMANDS = ("validate", "registry", "traceability", "snapshot-v1", "check")
 
 

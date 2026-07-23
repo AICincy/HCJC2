@@ -4,7 +4,6 @@ from pathlib import Path
 from tools.docsctl.parser import parse_document
 from tools.docsctl.registry import build_registry, render_registry_json, render_registry_markdown
 
-
 FIXTURE = Path(__file__).parent / "fixtures" / "valid-controlled.md"
 
 

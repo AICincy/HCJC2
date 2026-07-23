@@ -1,6 +1,5 @@
 from pathlib import Path
 
-
 EXPECTED = {
     "docs/MASTER-SPEC.md",
     "docs/reference/HCJC-CANONICAL-REFERENCE.md",

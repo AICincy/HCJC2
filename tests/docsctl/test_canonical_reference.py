@@ -2,7 +2,6 @@ from pathlib import Path
 
 from tools.docsctl.parser import parse_document
 
-
 EXPECTED = {f"A-{number}" for number in range(1, 47)}
 
 

@@ -4,7 +4,6 @@ import json
 from pathlib import Path
 from typing import Any
 
-
 NAMESPACE_ORDER = {"A": 0, "V1": 1, "V2": 2, "D": 3, "S": 4, "T": 5, "E": 6}
 
 

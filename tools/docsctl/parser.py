@@ -15,7 +15,6 @@ from tools.docsctl.model import (
     Relationship,
 )
 
-
 CONTROLLED_HEADING_RE = re.compile(
     r"^(?P<marks>#{1,6}) (?P<code>(?:A|V1|V2|D|S|T|E)-[1-9][0-9]*) (?P<title>\S.*)$"
 )

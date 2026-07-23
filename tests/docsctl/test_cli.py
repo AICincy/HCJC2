@@ -14,7 +14,6 @@ def test_help_lists_all_commands(capsys):
 
 
 def test_load_documents_includes_sibling_repository(tmp_path):
-    from pathlib import Path
     from tools.docsctl.cli import _load_documents
 
     hcjc2 = tmp_path / "HCJC2"

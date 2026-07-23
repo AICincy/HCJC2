@@ -1,6 +1,5 @@
 from pathlib import Path
 
-
 SOURCE_PATHS = {
     "docs/ARCHITECTURE-PRINCIPLES.md",
     "docs/MIGRATION-ACCEPTANCE.md",

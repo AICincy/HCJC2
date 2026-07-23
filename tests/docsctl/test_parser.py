@@ -5,7 +5,6 @@ import pytest
 from tools.docsctl.model import DocumentStatus
 from tools.docsctl.parser import FrontMatterError, github_anchor, parse_document
 
-
 FIXTURES = Path(__file__).parent / "fixtures"
 
 

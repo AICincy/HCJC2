@@ -4,7 +4,6 @@ from tools.docsctl.model import ParsedDocument
 from tools.docsctl.parser import parse_document
 from tools.docsctl.validate import validate_documents
 
-
 FIXTURES = Path(__file__).parent / "fixtures" / "validation"
 
 

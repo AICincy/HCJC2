@@ -7,7 +7,6 @@ from urllib.parse import unquote
 
 from tools.docsctl.parser import github_anchor
 
-
 MARKDOWN_LINK_RE = re.compile(r"(?<!!)\[[^\]]+\]\((?P<target>[^)]+)\)")
 HEADING_RE = re.compile(r"^#{1,6} (?P<title>.+)$")
 
